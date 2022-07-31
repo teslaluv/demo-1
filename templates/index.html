@@ -1,27 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <style type="text/css">
-      body {
-        background: black;
-        color: white;
-      }
-      div.container {
-        max-width: 500px;
-        margin: 100px auto;
-        border: 20px solid white;
-        padding: 10px;
-        text-align: center;
-      }
-      h4 {
-        text-transform: uppercase;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h4>Cat Gif of the day</h4>
-      <img src="{{url}}" />
-      <p><small>Courtesy: <a href="http://www.buzzfeed.com/copyranter/the-best-cat-gif-post-in-the-history-of-cat-gifs">Buzzfeed</a></small></p>
-    </div>
-  </body>
+<head>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+  $(function() {
+    var xhr = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC");
+    xhr.done(function(data) { 
+      $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
+    });
+  });
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .gif-bg {
+      background:url('') no-repeat center center;	
+      width:100%; 
+      height:100%;
+      min-height:100%; /* for mobile and tablets */
+      background-size:cover;	
+      padding: 25px;
+      position:absolute
+    }
+  </style>
+</head>
+<body>
+
+<div class="gif-bg">
+</div>
+
+</body>
 </html>
