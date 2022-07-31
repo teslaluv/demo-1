@@ -1,35 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script>
-  $(function() {
-    var xhr = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC");
-    xhr.done(function(data) { 
-      $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
-    });
-  });
-  </script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .gif-bg {
-      background:url('') no-repeat center center;	
-      width:100%; 
-      height:100%;
-      min-height:100%; /* for mobile and tablets */
-      background-size:cover;	
-      padding: 25px;
-      position:absolute
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+        body {
+            background-color: #030303;
+            font-family: 'DM Sans', sans-serif;
+            
+        }
+
+        nav {
+            position: absolute;
+            width: 1920px;
+            height: 120px;
+            left: 0px;
+            top: 0px;
+            background: #030303;
+            
+        }
+        .item0 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px 16px 16px 0px;
+
+            position: absolute;
+            width: 89px;
+            height: 56px;
+            left: 725px;
+            top: 48px;
+        }
+
+        .item1 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px;
+
+            position: absolute;
+            width: 81px;
+            height: 56px;
+            left: 814px;
+            top: 48px;
+        }
+
+        .item2 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px;
+
+            position: absolute;
+            width: 119px;
+            height: 56px;
+            left: 895px;
+            top: 48px;
+        }
+
+        .item3 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px;
+
+            position: absolute;
+            width: 134px;
+            height: 56px;
+            left: 1014px;
+            top: 48px;
+        }
+
+        .item4 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px 0px 16px 16px;
+
+            position: absolute;
+            width: 239px;
+            height: 56px;
+            left: 1596px;
+            top: 48px;
+        }
+
+        .text4nav0 {
+            position: static;
+            width: 73px;
+            height: 24px;
+            left: 0px;
+            top: 16px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.48);
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .text4nav1 {
+            position: static;
+            width: 49px;
+            height: 24px;
+            left: 16px;
+            top: 16px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+
+            color: rgba(255, 255, 255, 0.48);
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .text4nav2 {
+            position: static;
+            width: 87px;
+            height: 24px;
+            left: 16px;
+            top: 16px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+
+            color: rgba(255, 255, 255, 0.48);
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .text4nav3 {
+            position: static;
+            width: 102px;
+            height: 24px;
+            left: 16px;
+            top: 16px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+
+            color: rgba(255, 255, 255, 0.48);
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+    </style>
+    <title>Gaming News</title>
 </head>
 <body>
-
-<div class="gif-bg">
-</div>
-
+    <nav>
+        <ul class="navigation">
+            <li class="item0"><p class="text4nav0">MAIN</p></li>
+            <li class="item1"><p class="text4nav1">THE MOST POPULAR NEWS</p></li>
+            <li class="item2"><p class="text4nav2">ABOUT US</p></li>
+            <li class="item3"><p class="text4nav3">COMPANIES</p></li>
+            <li class="item4"><p class="text4nav4">GET NEW GAMES</p></li>
+        </ul>
+    </nav>
 </body>
 </html>
